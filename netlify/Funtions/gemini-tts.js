@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   if (event.httpMethod !== "POST") return { statusCode: 405, body: "Method Not Allowed" };
 
   try {
-    const { text, voice = 'Kore' } = JSON.parse(event.body);
+    const { text, voice = 'Leda' } = JSON.parse(event.body);
 
     // Inicializar el cliente de Gemini con la API Key desde las variables de entorno
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
